@@ -13,3 +13,5 @@ cd to the project file
 
 # Update Log
 v1.0 Initial release
+
+v2.0 Add color distance
