@@ -6,6 +6,7 @@ import win32con
 import win32gui
 import os
 import re
+from math import sqrt
 
 class FacerigDesktopWidget:
     def __init__(self):
@@ -32,9 +33,36 @@ class FacerigDesktopWidget:
             _, frame = self.camera.read()
             frame = np.transpose(frame,(1,0,2))
             RGB = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            RGB = self._ConvertTransparent(RGB)
             pygame.surfarray.blit_array(self.display, RGB)
             pygame.display.flip()
             cv2.waitKey(1)
+
+    def _ConvertTransparent(self,frame):
+        green = np.array([0,255,0])
+        mask = np.sum((frame-green)**2,axis=-1) < 150**2
+        frame[mask] = green
+        return frame
+
+    '''
+    def _ConvertTransparent(self,frame):
+        w,h,_ = frame.shape
+        for x in range(w):
+            for y in range(h):
+                r,g,b=list(frame[x][y])
+                r = int(r)
+                g = int(g)
+                b = int(b)
+                if self._ColorDistance(r,g,b):
+                    frame[x][y][0] = 0
+                    frame[x][y][1] = 255
+                    frame[x][y][2] = 0
+        return frame
+
+    def _ColorDistance(self,r,g,b):
+        if sqrt(r*r+(g-255)*(g-255)+b*b) < 200:
+            return True
+    '''
 
     def _ReadConfig(self):
         content = []
