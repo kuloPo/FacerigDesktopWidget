@@ -12,4 +12,4 @@ cd to the project file
 `pythonw main.py`
 
 # Update Log
-V1.0 Initial release
+v1.0 Initial release
