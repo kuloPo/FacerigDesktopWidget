@@ -1,7 +1,7 @@
 # FacerigDesktopWidget
-Show facerig output on the top of desktop
+Show facerig output on desktop
 # Installation
-You can simply download the file from release or
+You can simply download the executable file from [release](https://github.com/kuloPo-com/FacerigDesktopWidget/releases) or
 # Run from Source
 These codes are tested and run under python 3.7.2 on Windows 10 x64
 
@@ -9,7 +9,7 @@ Install the dependences: `pip install -r requirements.txt`
 
 cd to the project file
 
-`pythonw main.py`
+`python main.py`
 
 # Update Log
 v1.0 Initial release
