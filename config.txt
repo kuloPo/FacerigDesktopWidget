@@ -1,4 +1,0 @@
-TransparentColor=0,255,0 # Transparent color, default is green.
-DeviceIndex=0 # Device index of the facerig output. Normally your webcam is 0 and the facerig is 1
-X_AxisOffset=0 # e.g. +200: Move the image to the right by 200 pixel
-Y_AxisOffset=0 # e.g. -100: Move the image up by 100 pixel
