@@ -19,3 +19,5 @@ v1.0 Initial release
 v1.1 Add color distance
 
 v1.2 Some useless update
+
+v1.3 Add menu. Some optimization.
