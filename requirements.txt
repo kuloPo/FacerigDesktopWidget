@@ -1,5 +1,5 @@
 pygame
-tkinter
+tk
 numpy
 opencv-python
 pywin32==228
