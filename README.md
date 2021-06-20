@@ -1,5 +1,7 @@
 # FacerigDesktopWidget
 Show facerig output on desktop
+# Build
+`pyinstaller -F -w main.py -n FacerigDesktopWidget.exe`
 # Installation
 You can simply download the executable file from [release](https://github.com/kuloPo-com/FacerigDesktopWidget/releases) or
 # Run from Source
