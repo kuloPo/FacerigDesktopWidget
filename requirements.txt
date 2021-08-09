@@ -2,4 +2,4 @@ pygame
 tk
 numpy
 opencv-python
-pywin32==228
+pywin32==301
